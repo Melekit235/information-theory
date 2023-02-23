@@ -1,0 +1,11 @@
+C:\Users\User\RiderProjects\TI1\TI1\bin\Debug\TI1.exe.config
+C:\Users\User\RiderProjects\TI1\TI1\bin\Debug\TI1.exe
+C:\Users\User\RiderProjects\TI1\TI1\bin\Debug\TI1.pdb
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.Properties.Resources.resources
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.csproj.GenerateResource.cache
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.exe
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.pdb
+C:\Users\User\RiderProjects\TI1\TI1\obj\Debug\TI1.Form1.resources
