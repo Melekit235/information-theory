@@ -23,7 +23,6 @@ public class Vigenere
             keyIndex = (i) % key.Length;
                         
         }
-        Form1.writeInFil(resultText);
         return resultText;
     }
 
@@ -47,9 +46,7 @@ public class Vigenere
                         
                        
         }
-
-        Form1.writeInFil(resultText);
-
+        
         return resultText;
     }
 }

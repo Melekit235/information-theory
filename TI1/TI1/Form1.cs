@@ -39,7 +39,7 @@ namespace TI1
 
             for (int i = 0; i < fileContent.Length; i++)
             {
-                if ((fileContent[i] >= 'а') && (fileContent[i] <= 'я')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                if (((fileContent[i] >= 'а') && (fileContent[i] <= 'я')) || (fileContent[i] == 'ё') ) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
                         
                     inText += fileContent[i];
             }
@@ -92,7 +92,7 @@ namespace TI1
             bool bLetter = true;
             for (int i = 0; i < key.Length; i++)
             {
-                if ((key[i] <= 'а') || (key[i] >= 'я')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                if ((key[i] < 'а') || (key[i] > 'я') && (key[i] != 'ё')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
                     bLetter = false;
             }
             if (!bLetter)
@@ -102,10 +102,8 @@ namespace TI1
                 inText = readFromFil();
                 
                 rtbEnVi.Text = Vigenere.Encript(inText, key);
- 
+                writeInFil(rtbEnVi.Text);
             }
-            writeInFil(rtdEnRail.Text);
-            
         }
 
         private void bDeRail_Click(object sender, EventArgs e)
@@ -121,8 +119,9 @@ namespace TI1
                 inText = readFromFil();
                 
                 rtbDeRail.Text = Railways.Decript(inText, key);
+                writeInFil(rtbDeRail.Text);
             }
-            writeInFil(rtdEnRail.Text);
+            
         }
 
         private void bDeVi_Click(object sender, EventArgs e)
@@ -133,7 +132,7 @@ namespace TI1
             bool bLetter = true;
             for (int i = 0; i < key.Length; i++)
             {
-                if ((key[i] <= 'а') || (key[i] >= 'я')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                if ((key[i] < 'а') || (key[i] > 'я') && (key[i] != 'ё')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
                     bLetter = false;
             }
             if (!bLetter)
@@ -143,8 +142,8 @@ namespace TI1
                 inText = readFromFil();
                 
                 rtbDeVi.Text = Vigenere.Decript(inText, key);
+                writeInFil(rtbDeVi.Text);
             }
-            writeInFil(rtdEnRail.Text);
         }
     }
 }
