@@ -17,7 +17,7 @@ public class Vigenere
                       
             int next = i / key.Length;
             int shift = (Array.IndexOf(table, key[keyIndex]) + next) % tableSize;
-            int cipherChar = (Array.IndexOf(table,c)  + shift + 1) % tableSize;
+            int cipherChar = (Array.IndexOf(table,c)  + shift) % tableSize;
             resultText += table[cipherChar];
             i++;
             keyIndex = (i) % key.Length;
@@ -39,7 +39,7 @@ public class Vigenere
 
             int next = i / key.Length;
             int shift = (Array.IndexOf(table,key[keyIndex]) + next) % tableSize;
-            int plainChar = (Array.IndexOf(table,c) - shift - 1 + tableSize) % tableSize;
+            int plainChar = (Array.IndexOf(table,c) - shift + tableSize) % tableSize;
             resultText += table[plainChar];
             i++;
             keyIndex = (i) % key.Length;

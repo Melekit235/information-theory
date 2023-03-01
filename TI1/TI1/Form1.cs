@@ -34,16 +34,16 @@ namespace TI1
                     {
                         fileContent = reader.ReadToEnd();
                     }
+
+                    fileContent = fileContent.ToLower();
+                    for (int i = 0; i < fileContent.Length; i++)
+                    {
+                        if (((fileContent[i] >= 'а') && (fileContent[i] <= 'я')) || (fileContent[i] == 'ё') ) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                        
+                            inText += fileContent[i];
+                    }
                 }
             }
-
-            for (int i = 0; i < fileContent.Length; i++)
-            {
-                if (((fileContent[i] >= 'а') && (fileContent[i] <= 'я')) || (fileContent[i] == 'ё') ) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
-                        
-                    inText += fileContent[i];
-            }
-
             return inText.ToLower();
         }
 
@@ -69,9 +69,17 @@ namespace TI1
         private void bEncript_Click(object sender, EventArgs e)
         {
             string inText = null;
+            string keyy = tEnRail.Text;
+            string keyInt = string.Empty;
             int key;
+            for (int i = 0; i < keyy.Length; i++)
+            {
+                if ((keyy[i] >= '0') && (keyy[i] <= '9'))
+                        
+                    keyInt+= keyy[i];
+            }
             
-            bool bInt = int.TryParse(tEnRail.Text, out key);
+            bool bInt = int.TryParse(keyInt, out key);
             if (!bInt)
                 MessageBox.Show("Неверный ключ","ERROR",MessageBoxButtons.OK);
             else
@@ -87,16 +95,20 @@ namespace TI1
         private void bEnVi_Click(object sender, EventArgs e)
         {
             string inText = null;
-            string key = tEnVi.Text.ToLower();
+            string keyy = tEnVi.Text.ToLower();
+            string key = string.Empty;
             
-            bool bLetter = true;
-            for (int i = 0; i < key.Length; i++)
+            for (int i = 0; i < keyy.Length; i++)
             {
-                if ((key[i] < 'а') || (key[i] > 'я') && (key[i] != 'ё')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
-                    bLetter = false;
+                if (((keyy[i] >= 'а') && (keyy[i] <= 'я')) || (keyy[i] == 'ё') ) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                        
+                    key+= keyy[i];
             }
-            if (!bLetter)
+
+            if (key == "")
+            {
                 MessageBox.Show("Неверный ключ","ERROR",MessageBoxButtons.OK);
+            }
             else
             {
                 inText = readFromFil();
@@ -109,9 +121,17 @@ namespace TI1
         private void bDeRail_Click(object sender, EventArgs e)
         {
             string inText = null;
+            string keyy = tDeRail.Text;
+            string keyInt = string.Empty;
             int key;
+            for (int i = 0; i < keyy.Length; i++)
+            {
+                if ((keyy[i] >= '0') && (keyy[i] <= '9'))
+                        
+                    keyInt+= keyy[i];
+            }
             
-            bool bInt = int.TryParse(tEnRail.Text, out key);
+            bool bInt = int.TryParse(keyInt, out key);
             if (!bInt)
                 MessageBox.Show("Неверный ключ","ERROR",MessageBoxButtons.OK);
             else
@@ -127,16 +147,20 @@ namespace TI1
         private void bDeVi_Click(object sender, EventArgs e)
         {
             string inText = null;
-            string key = tDeVi.Text.ToLower();
+            string keyy = tDeVi.Text.ToLower();
+            string key = string.Empty;
             
-            bool bLetter = true;
-            for (int i = 0; i < key.Length; i++)
+            for (int i = 0; i < keyy.Length; i++)
             {
-                if ((key[i] < 'а') || (key[i] > 'я') && (key[i] != 'ё')) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
-                    bLetter = false;
+                if (((keyy[i] >= 'а') && (keyy[i] <= 'я')) || (keyy[i] == 'ё') ) //|| ((fileContent[i] >= 'a') && (fileContent[i] <= 'z')))
+                        
+                    key+= keyy[i];
             }
-            if (!bLetter)
+
+            if (key == "")
+            {
                 MessageBox.Show("Неверный ключ","ERROR",MessageBoxButtons.OK);
+            }
             else
             {
                 inText = readFromFil();
