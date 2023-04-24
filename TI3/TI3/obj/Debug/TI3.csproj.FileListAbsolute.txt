@@ -1,0 +1,11 @@
+C:\Users\User\RiderProjects\TI3\TI3\bin\Debug\TI3.exe.config
+C:\Users\User\RiderProjects\TI3\TI3\bin\Debug\TI3.exe
+C:\Users\User\RiderProjects\TI3\TI3\bin\Debug\TI3.pdb
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.Properties.Resources.resources
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.csproj.GenerateResource.cache
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.exe
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.pdb
+C:\Users\User\RiderProjects\TI3\TI3\obj\Debug\TI3.Form1.resources
